@@ -174,7 +174,7 @@ svg:not(:root).svg-inline--fa {
 
 .features .feature1 {
     align-items: center;
-    padding: 50px;
+ 
 }
 
 .features .feature1 p {
@@ -206,7 +206,7 @@ svg:not(:root).svg-inline--fa {
 .services {
     text-align: center;
     position: relative;
-    padding: 50px;
+    padding: 50px 20px;
 }
 
 .services h1 {
@@ -214,14 +214,22 @@ svg:not(:root).svg-inline--fa {
     font-size: 100px;
     font-weight: bold;
     letter-spacing: -3px;
+
 }
 
-.services .advice {
+.services .head{
+    position: relative;
+}
+
+.services .head::after {
+ content: "Don't be busy, be productive";
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: 136px;
+top:70%;
     color: #797979;
+font-size: 15px;
+letter-spacing: 1px;
 }
 
 .services .service-header {
@@ -291,10 +299,17 @@ svg:not(:root).svg-inline--fa {
     .services .service-header h3 {
         font-size: 24px;
     }
-
-
-
-
+   
+}
+@media screen and (max-width:768px) {
+    .services h1{
+        font-size: 70px;
+    }
+    .services .head::after{
+        font-size: 11px;
+        top:75%;
+        white-space: nowrap;
+    }
 
    
 }
