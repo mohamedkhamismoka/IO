@@ -151,6 +151,7 @@ svg:not(:root).svg-inline--fa {
 
 .landing .overlay h1 {
     color: var(--mainColor);
+    font-size: 50px;
 }
 
 .landing .overlay p {
@@ -184,7 +185,7 @@ svg:not(:root).svg-inline--fa {
 
 .features .feature1 p:first-of-type {
     font-weight: 700;
-    font-size: 20px;
+    font-size: 19px;
     margin: 20px;
     width: 100%;
     color: black;
@@ -432,6 +433,18 @@ svg:not(:root).svg-inline--fa {
     ;
 }
 
+.contact .contact-data .social-contact .socials svg.fa-youtube:hover {
+    color: red;
+}
+
+.contact .contact-data .social-contact .socials svg.fa-facebook-f:hover {
+    color: blue;
+}
+
+.contact .contact-data .social-contact .socials svg.fa-twitter:hover {
+    color: aqua;
+}
+
 
 /*end contact*/
 
@@ -470,7 +483,7 @@ svg:not(:root).svg-inline--fa {
     .services .head::after,
     .portofolio-head::after,
     .contact-head::after {
-        font-size: 11px;
+        font-size: 17px;
         top: 75%;
         white-space: nowrap;
     }
