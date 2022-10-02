@@ -174,7 +174,6 @@ svg:not(:root).svg-inline--fa {
 
 .features .feature1 {
     align-items: center;
- 
 }
 
 .features .feature1 p {
@@ -209,27 +208,30 @@ svg:not(:root).svg-inline--fa {
     padding: 50px 20px;
 }
 
-.services h1 {
+.services h1,
+.portofolio-head h1,
+.contact-head h1 {
     color: #ebeced;
     font-size: 100px;
-    font-weight: bold;
+    font-weight: 800;
     letter-spacing: -3px;
-
 }
 
-.services .head{
+.services .head,
+.portofolio-head,
+.contact-head {
     position: relative;
 }
 
 .services .head::after {
- content: "Don't be busy, be productive";
+    content: "Don't be busy, be productive";
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-top:70%;
+    top: 73%;
     color: #797979;
-font-size: 15px;
-letter-spacing: 1px;
+    font-size: 15px;
+    letter-spacing: 1px;
 }
 
 .services .service-header {
@@ -239,6 +241,8 @@ letter-spacing: 1px;
 
 .services .service-header h3 {
     margin-left: 20px;
+    font-weight: bold;
+    font-size: 21px;
 }
 
 .services .ser p {
@@ -288,30 +292,182 @@ letter-spacing: 1px;
     z-index: -1;
 }
 
+.service-container {
+    padding: 0px 80px;
+    margin-top: 50px;
+}
+
+
+/*end services*/
+
+
+/*start portofolio*/
+
+.portofolio,
+.contact {
+    padding: 50px;
+    background-color: #f6f6f6;
+    ;
+}
+
+.portofolio-head,
+.contact-head {
+    display: flex;
+    justify-content: center;
+}
+
+.portofolio-head::after {
+    content: "If you do it right, it will last forever.";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 73%;
+    color: #797979;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.contact-head::after {
+    content: "We are born to create";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 73%;
+    color: #797979;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.portfolio-container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 100px;
+}
+
+.portfolio-container .card {
+    border: none;
+}
+
+.portfolio-container .card .card-body {
+    padding: 20px;
+}
+
+.portfolio-container .card .card-body .card-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.portfolio-container .card .card-body .card-text {
+    color: #777;
+    font-size: 15px;
+}
+
+
+/*end portofolio*/
 
 @media screen and (max-width:992px) {
     .services .service-image {
         display: none;
     }
+    .service-container {
+        padding: 0px 30px;
+        margin-top: 30px;
+    }
+    .services .service-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0px;
+    }
+    .services .service-header h3 {
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+    .portfolio-container {
+        padding: 0px;
+    }
+    .portfolio-container .card {
+        margin: 20px 0;
+    }
 }
+
+.contact .label {
+    font-size: 35px;
+    font-weight: 800;
+    color: #2c4755;
+    letter-spacing: -2px;
+    margin-bottom: 15px;
+}
+
+.contact .contact-data {
+    margin-top: 40px;
+    align-items: center;
+}
+
+.contact .contact-data .mail a {
+    font-size: 35px;
+    font-weight: 800;
+    color: #10cab7;
+    text-decoration: none;
+}
+
+.contact .contact-data .mail a:hover {
+    color: #10cab7;
+}
+
+.contact .contact-data .social-contact {
+    color: #2c4755;
+}
+
+.contact .contact-data .social-contact .socials svg {
+    color: #2c4755;
+    margin-left: 10px;
+    ;
+}
+
+
+/*end contact*/
+
+
+/*start footer*/
+
+.footer {
+    padding: 30px 10px;
+    align-items: center;
+    font-size: 18px;
+    background-color: #2c4755;
+    color: white;
+}
+
+.footer span {
+    color: var(--mainColor);
+    margin: 0 5px
+}
+
+
+/*end footer*/
 
 @media screen and (min-width:992px) {
     .services .service-header h3 {
-        font-size: 24px;
+        font-size: 21px;
+        font-weight: bold;
     }
-   
 }
+
 @media screen and (max-width:768px) {
-    .services h1{
+    .services h1,
+    .portofolio-head h1 {
         font-size: 70px;
     }
-    .services .head::after{
+    .services .head::after,
+    .portofolio-head::after {
         font-size: 11px;
-        top:75%;
+        top: 75%;
         white-space: nowrap;
     }
-
-   
 }
 
 
