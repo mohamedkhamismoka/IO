@@ -382,6 +382,10 @@ svg:not(:root).svg-inline--fa {
         align-items: center;
         margin-left: 0px;
     }
+    .services .ser p {
+        margin-left: 0px;
+        text-align: center;
+    }
     .services .service-header h3 {
         margin-left: 0px;
         margin-top: 10px;
@@ -459,13 +463,24 @@ svg:not(:root).svg-inline--fa {
 
 @media screen and (max-width:768px) {
     .services h1,
-    .portofolio-head h1 {
+    .portofolio-head h1,
+    .contact-head h1 {
         font-size: 70px;
     }
     .services .head::after,
-    .portofolio-head::after {
+    .portofolio-head::after,
+    .contact-head::after {
         font-size: 11px;
         top: 75%;
+        white-space: nowrap;
+    }
+    .contact .contact-data .label,
+    .contact .contact-data .mail a {
+        white-space: nowrap;
+        font-size: 20px;
+    }
+    .contact .social-contact,
+    .footer {
         white-space: nowrap;
     }
 }
