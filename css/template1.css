@@ -187,7 +187,7 @@ svg:not(:root).svg-inline--fa {
     font-weight: 700;
     font-size: 19px;
     margin: 20px;
-    width: 100%;
+white-space: nowrap;
     color: black;
 }
 
