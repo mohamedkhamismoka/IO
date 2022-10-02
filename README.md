@@ -1,5 +1,5 @@
-# Poston team Website
-![Design Preview](images/landing.png)
+# IO organization Website
+![Design Preview](images/landing.jpg)
 
 ## Welcome! 👋
 
