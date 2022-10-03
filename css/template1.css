@@ -187,14 +187,8 @@ svg:not(:root).svg-inline--fa {
     font-weight: 700;
     font-size: 19px;
     margin: 20px;
-white-space: nowrap;
+    width: 100%;
     color: black;
-}
-
-@media screen and (min-width:768px) {
-    .features .feature1 p:first-of-type {
-        width: 130%;
-    }
 }
 
 
@@ -211,7 +205,8 @@ white-space: nowrap;
 
 .services h1,
 .portofolio-head h1,
-.contact-head h1 {
+.contact-head h1,
+.about-head h1 {
     color: #ebeced;
     font-size: 100px;
     font-weight: 800;
@@ -368,42 +363,10 @@ white-space: nowrap;
 
 /*end portofolio*/
 
-@media screen and (max-width:992px) {
-    .services .service-image {
-        display: none;
-    }
-    .service-container {
-        padding: 0px 30px;
-        margin-top: 30px;
-    }
-    .services .service-header {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-left: 0px;
-    }
-    .services .ser p {
-        margin-left: 0px;
-        text-align: center;
-    }
-    .services .service-header h3 {
-        margin-left: 0px;
-        margin-top: 10px;
-    }
-    .portfolio-container {
-        padding: 0px;
-    }
-    .portfolio-container .card {
-        margin: 20px 0;
-    }
-}
-
 .contact .label {
     font-size: 35px;
     font-weight: 800;
     color: #2c4755;
-    letter-spacing: -2px;
     margin-bottom: 15px;
 }
 
@@ -449,6 +412,95 @@ white-space: nowrap;
 /*end contact*/
 
 
+/*start about*/
+
+.about {
+    margin: 50px;
+    background-color: white;
+}
+
+.about-head {
+    position: relative;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.about-head h1::after {
+    content: "Less is more work";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 73%;
+    color: #797979;
+    font-size: 15px;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.about .about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about .about-container .image-cont {
+    position: relative;
+    z-index: 2;
+}
+
+.about .about-container .image-cont img {
+    height: 400px;
+}
+
+.about .about-container .image-cont::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: calc(100% + 80px);
+    background-color: #ebeced;
+    left: -50px;
+    z-index: -1;
+    top: -40px;
+}
+
+.about .about-container .image-cont::after {
+    content: '';
+    width: 120px;
+    height: 400px;
+    border-bottom: 80px solid var(--mainColor);
+    border-left: 80px solid var(--mainColor);
+    position: absolute;
+    right: -73px;
+    top: -40px;
+    z-index: -1;
+}
+
+.about .about-container .first-part {
+    font-weight: bold;
+    line-height: 2;
+    margin-top: 50px;
+}
+
+.about .about-container .second-part {
+    line-height: 2;
+    color: #777;
+}
+
+.text-cont {
+    justify-content: flex-start;
+    padding-left: 100px;
+}
+
+.text-cont hr {
+    background-color: var(--mainColor);
+    width: 50%;
+    border: 2px solid var(--mainColor);
+}
+
+
+/*end about*/
+
+
 /*start footer*/
 
 .footer {
@@ -467,6 +519,9 @@ white-space: nowrap;
 
 /*end footer*/
 
+
+/*start media query*/
+
 @media screen and (min-width:992px) {
     .services .service-header h3 {
         font-size: 21px;
@@ -482,9 +537,10 @@ white-space: nowrap;
     }
     .services .head::after,
     .portofolio-head::after,
-    .contact-head::after {
+    .contact-head::after,
+    .about-head::after {
         font-size: 17px;
-        top: 75%;
+        top: 66%;
         white-space: nowrap;
     }
     .contact .contact-data .label,
@@ -498,5 +554,54 @@ white-space: nowrap;
     }
 }
 
+@media screen and (max-width:992px) {
+    .services .service-image {
+        display: none;
+    }
+    .service-container {
+        padding: 0px 30px;
+        margin-top: 30px;
+    }
+    .services .service-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0px;
+    }
+    .services .ser p {
+        margin-left: 0px;
+        text-align: center;
+    }
+    .services .service-header h3 {
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+    .portfolio-container {
+        padding: 0px;
+    }
+    .portfolio-container .card {
+        margin: 20px 0;
+    }
+    .about .image-cont::after,
+    .about .image-cont::before {
+        display: none;
+    }
+    .about .text-cont {
+        text-align: center;
+        padding-left: 0px;
+    }
+    .about .text-cont hr {
+        display: block;
+        margin: 10px auto
+    }
+}
 
-/*end services*/
+@media screen and (min-width:768px) {
+    .features .feature1 p:first-of-type {
+        width: 130%;
+    }
+}
+
+
+/*end media query*/
