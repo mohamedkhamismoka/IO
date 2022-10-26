@@ -1,4 +1,4 @@
-![Design Preview](images/Capture.png)
+![Design Preview](images/Capture.PNG)
 
 ## Welcome! 👋
 
